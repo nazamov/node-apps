@@ -1,0 +1,23 @@
+{
+  "name": "node-apps",
+  "version": "1.0.0",
+  "description": "Node usefull apps",
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazamov/node-apps.git"
+  },
+  "scripts": {
+    "psql-status-checker": "node src/postgredb-checker.js"
+  },
+  "author": "Nabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazamov/node-apps/issues"
+  },
+  "homepage": "https://github.com/nazamov/node-apps#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "pg": "^8.12.0"
+  }
+}
