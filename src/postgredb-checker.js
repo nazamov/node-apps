@@ -21,12 +21,15 @@ function restartPostgres() {
 }
 
 async function checkDb() {
+  const client = new pg.Client(conString);
   try {
-    await new pg.Client(conString).connect();
+    await client.connect();
     console.log(colors.green("Connection with posgtres is excellent"));
   } catch (e) {
     console.log(colors.red("Couldn't connect to postgres", e.message));
     await restartPostgres();
+  } finally {
+    await client.end();
   }
 }
 
